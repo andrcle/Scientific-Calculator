@@ -1,5 +1,5 @@
 # ScientificCalculator
-Scientific Calculator using Java and Java Swing for the Gui 
+Scientific Calculator using Java with GUI
 
 Note:
 1. Multiple operations not supported, have to use "=" after every operation
