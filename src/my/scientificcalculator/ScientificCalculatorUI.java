@@ -293,6 +293,11 @@ public class ScientificCalculatorUI extends javax.swing.JFrame {
         });
 
         addsub.setText("+/-");
+        addsub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addsubActionPerformed(evt);
+            }
+        });
 
         zero.setText("0");
         zero.addActionListener(new java.awt.event.ActionListener() {
@@ -716,6 +721,15 @@ public class ScientificCalculatorUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         memory -= Double.parseDouble(textField.getText());
     }//GEN-LAST:event_mmActionPerformed
+
+    private void addsubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addsubActionPerformed
+        // TODO add your handling code here:
+        String temp = textField.getText();
+        if (temp.charAt(0) == '-') 
+            textField.setText(temp.substring(1, temp.length()));
+        else
+            textField.setText("-" + temp);
+    }//GEN-LAST:event_addsubActionPerformed
 
     /**
      * @param args the command line arguments
